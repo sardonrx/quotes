@@ -1,6 +1,6 @@
 # Quotes Generator
 
-![Quotes Generator](insert_image_url_here)
+![Quotes Generator](https://github.com/susan-chips/quotes/blob/main/Image%202024-02-16%20at%202.05%20PM.jpeg)
 
 ## Overview
 
