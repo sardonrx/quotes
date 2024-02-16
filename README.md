@@ -50,7 +50,7 @@ This project is licensed under the **MIT License**.
 
 ## Acknowledgments
 
-- Icons made by [Author](www.flaticon.com).
+- Icons made by (www.flaticon.com).
 
 ## Contact
 
