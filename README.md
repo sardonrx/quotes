@@ -29,22 +29,29 @@ Visit the live site: [Quotes Generator Live](https://susan-chips.github.io/quote
    ```bash
    git clone https://github.com/susan-chips/quotes.git
 Open the index.html file in your preferred web browser.
-Usage
-Open the Quotes Generator in your web browser.
-Click the "Generate Quote" button to get a new random quote.
-Explore different categories by selecting from the available options.
-Contributing
+## Usage
+
+1. **Open the Quotes Generator in your web browser.**
+2. **Click the "new Quote" button to get a new random quote.**
+
+## Contributing
+
 If you'd like to contribute to the Quotes Generator project, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push your changes to your fork.
-Create a pull request, explaining the changes you made.
-License
-This project is licensed under the MIT License.
+1. **Fork the repository.**
+2. **Create a new branch for your feature or bug fix.**
+3. **Make your changes and commit them.**
+4. **Push your changes to your fork.**
+5. **Create a pull request, explaining the changes you made.**
 
-Acknowledgments
-Icons made by Author from www.flaticon.com.
-Contact
+## License
+
+This project is licensed under the **MIT License**.
+
+## Acknowledgments
+
+- Icons made by [Author](www.flaticon.com).
+
+## Contact
+
 For any questions or feedback, feel free to contact us at [sardonx0@gmail.com].
