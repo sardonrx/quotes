@@ -1,44 +1,65 @@
 const quoteContainer = document.getElementById('quote-container');
-const quoteText = document.getElementById('quote-text');
-const quoteAuthor = document.getElementById('author');
-const buttonContainer = document.getElementById('twitter');
-const newQuote = document.getElementById('new-quote');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
+const twitterBtn = document.getElementById('twitter');
+const newQuoteBtn = document.getElementById('new-quote');
+const loader = document.getElementById ('loader');
 
-let apiQuotes = [];
+let apiQuotes =[];
 
-function newQuotes(){
+// show loading
+function loading() {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
 
-    const quote = apiQuotes[ Math.floor(math.random)* apiQuotes.length];
-    // authorText.textContent = quote.author, quoteText.textContent = quoteText;
-
-    if(!quote.author){
-        authorText.textContent = "unknown";
+// hide loading
+function complete() {
+    loader.hidden = true;
+    quoteContainer.hidden = false;
+}
+// show new quote
+function newQuote() {
+    loading();
+    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+    if(!quote.author) {
+        authorText.textContent = 'Unknown';
     } else {
         authorText.textContent = quote.author;
     }
-    if (quote.text.lenght > 50 ){
+    
+    // check quote length to determine styling
+    if (quote.text.length > 120) {
         quoteText.classList.add('long-quote');
-    }else {
-        quoteText.classList.remove('long-queue');
+    } else {
+        quoteText.classList.remove('long-quote');
     }
     quoteText.textContent = quote.text;
-
+    complete();
 }
-async function getQuotes () {
 
-    const apiUrl = "https://jacintodesign.github.io/quotes-api/data/quotes.json";
-
+// Get quotes from API
+async function getQuotes() {
+    loading();
+    const apiURL = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
     try {
-        const response = await fetch (apiUrl);
-
+        const response = await fetch(apiURL);
         apiQuotes = await response.json();
-
-        newQuotes();
-    
-    } catch(error ){
-        //pass your error 
+        newQuote();
+    } catch(error){
     }
-    
 }
+
+
+// tweet a quote
+
+function tweetQuote () {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(twitterUrl, '_blank');
+}
+
+newQuoteBtn.addEventListener('click', newQuote);
+twitterBtn.addEventListener('click', tweetQuote);
+
 
 getQuotes();
