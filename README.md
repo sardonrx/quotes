@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Quotes Generator is a simple project that allows users to generate random quotes. Whether you're looking for inspiration, motivation, or just a good laugh, this generator provides a diverse collection of quotes to suit various moods.
+The Quotes Generator is a simple app that allows users to generate random quotes. Whether you're looking for inspiration, motivation, or just a good laugh, this generator provides a diverse collection of quotes to suit various moods.
 
 ## Live Site
 
